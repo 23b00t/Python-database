@@ -33,7 +33,7 @@ def main():
 		f = open('list.txt')
 		data = f.read()
 		f.close()
-		#data = data.split('#')
+		data = data.split('#')
 		print(data)
 		#print(type(data))
 		while contin:
@@ -42,9 +42,9 @@ def main():
 				search = input('Name: ')
 				#print(data)
 				#print(type(data))
-				for i in range(len(data)):
-					if data[i] == search:
-						print(data[i])
+				for i in data:
+					if search in i:
+						print(i)
 	intro()
 if __name__ == "__main__":
 	main()
